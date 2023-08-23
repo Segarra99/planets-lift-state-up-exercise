@@ -13,7 +13,7 @@
     "image": "http://space-facts.com/wp-content/uploads/venus-transparent.png",
     "velocity": 35,
     "distance": 108,
-    "description": "Venus is the second planet from the Sun and is the second brightest object in the night sky after the Moon. Named after the Roman goddess of love and beauty, Venus is the second largest terrestrial planet and is sometimes referred to as the Earth’s sister planet due the their similar size and mass. The surface of the planet is obscured by an opaque layer of clouds made up of sulphuric acid."
+    "description": "Venus is the second planet from the Sun and is the second brightest object in the night sky after the Moon. Named after the Roman goddess of love and beauty, Venus is the second largest terrestrial planet and is sometimes referred to as the Earth's sister planet due the their similar size and mass. The surface of the planet is obscured by an opaque layer of clouds made up of sulphuric acid."
   },
   {
     "id": 3,
@@ -68,6 +68,6 @@
     "image": "http://pngimg.com/uploads/sun/sun_PNG13424.png",
     "velocity": 220,
     "distance": 0,
-    "description": "The Sun (or Sol), is the star at the centre of our solar system and is responsible for the Earth’s climate and weather. The Sun is an almost perfect sphere with a difference of just 10km in diameter between the poles and the equator. The average radius of the Sun is 695,508 km (109.2 x that of the Earth) of which 20–25% is the core."
+    "description": "The Sun (or Sol), is the star at the centre of our solar system and is responsible for the Earth's climate and weather. The Sun is an almost perfect sphere with a difference of just 10km in diameter between the poles and the equator. The average radius of the Sun is 695,508 km (109.2 x that of the Earth) of which 20–25% is the core."
   }
 ]

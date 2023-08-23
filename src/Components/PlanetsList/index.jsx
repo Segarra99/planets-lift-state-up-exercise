@@ -1,26 +1,41 @@
 import {useState} from 'react';
 import planetsData from "../../assets/data/planets.json";
-
 import PlanetCard from '../PlanetCard';
+import Summary from '../PlanetSummary';
 
 function PlanetList(){
     // State Variables
     const [planets, setPlanets] = useState(planetsData);
+    const [planetsDeleted, setDeletedPlanets] = useState(0);
     
     // Function Declaration
     const deletePlanet = (planetId) =>{
-        const filteredPlanets = planets.filter((planet)=>{
+        /*const filteredPlanets = planets.filter((planet)=>{
             return planet.id !== planetId;
+        })*/
+
+        // Best Practice: create a copy of the state variable
+        const planetsCopy = [...planets];
+
+        planetsCopy.forEach((planet, index)=>{
+            if(planet.id == planetId){
+                planetsCopy.splice(index, 1);
+            }
         })
-        setPlanets(filteredPlanets);
+        
+        //setPlanets(filteredPlanets);
+        setPlanets(planetsCopy);
+        setDeletedPlanets(planetsDeleted + 1);
     }
 
     const resetPlanets = () =>{
        setPlanets(planetsData);
+       setDeletedPlanets(0);
     }
 
     const deleteAllPlanets = () =>{
         setPlanets([]);
+        setDeletedPlanets(planetsData.length);
     }
 
 
@@ -29,7 +44,8 @@ function PlanetList(){
             <h2>🪐 Planets List 🪐</h2>
             <button onClick={resetPlanets}>Reset All Planets</button>
             <button onClick={deleteAllPlanets}>Delete All Planets</button>
-            {planets.map((planet)=>{
+            <Summary planetsDeleted={planetsDeleted}/>
+            {planetsDeleted < 9 && planets.map((planet)=>{
                 return(
                    <PlanetCard
                    key={planet.id}
